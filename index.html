@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+ 
+</head>
+<body>
+    <div class="navbar">
+        <h1>Fake E-Commerce Store</h1>
+        <div>
+            <span class="shop-icon" onclick="openCart()">🛒 <span id="cart-count" class="cart-count">0</span></span>
+            <span class="toggle-theme" onclick="toggleTheme()" id="theme-icon">☀️</span>
+        </div>
+    </div>
+    <div class="products" id="products"></div>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const productsContainer = document.getElementById("products");
+            const cartItemsContainer = document.getElementById("cart-items");
+            const cartCountElement = document.getElementById("cart-count");
+            const themeIcon = document.getElementById("theme-icon");
+            let cart = [];
+
+            function fetchProducts() {
+                productsContainer.innerHTML = "Loading...";
+                fetch("https://fakestoreapi.com/products")
+                    .then(res => res.json())
+                    .then(products => {
+                        productsContainer.innerHTML = "";
+                        products.slice(0, 80).forEach(product => {
+                            const productElement = document.createElement("div");
+                            productElement.classList.add("product");
+                            productElement.innerHTML = `
+                                <img src="${product.image}" width="100" />
+                                <h3>${product.title}</h3>
+                                <p class="product-price">$${product.price}</p>
+                                <button class="add-to-cart" onclick="addToCart('${product.title}', ${product.price})">Add to Cart</button>
+                                <button class="buy-now" onclick="buyNow('${product.title}')">Buy Now</button>
+                            `;
+                            productsContainer.appendChild(productElement);
+                        });
+                    });
+            }
+
+            window.addToCart = (title, price) => {
+                cart.push({ title, price });
+                alert("You have added to cart");
+                updateCart();
+            };
+            
+            window.buyNow = (title) => {
+                alert(`You have purchased: ${title}`);
+                cart.push({ title, price: 0 });
+                updateCart();
+            };
+            
+            function updateCart() {
+                cartItemsContainer.innerHTML = "";
+                cart.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = `${item.title} - $${item.price}`;
+                    cartItemsContainer.appendChild(li);
+                });
+                cartCountElement.textContent = cart.length;
+            }
+            
+            window.openCart = () => {
+                alert("Cart Items: " + cart.map(item => item.title).join(", "));
+            };
+
+            window.toggleTheme = () => {
+                document.body.classList.toggle("dark-mode");
+                themeIcon.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+            };
+
+            fetchProducts();
+        });
+    </script>
+</body>
+</html>
