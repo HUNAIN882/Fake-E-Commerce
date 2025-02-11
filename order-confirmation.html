@@ -6,6 +6,11 @@
     <title>Order Confirmation</title>
     <link rel="stylesheet" href="style.css">
     <style>
+            * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+          }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -37,24 +42,32 @@
             background-color: green;
             scale: 1.1;
         }
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    
 
-.bike img{
-   animation:  bike 5s infinite linear;
-}  
+        .bike {
+            position: absolute;
+            margin-top: 200px;
+            left: -200px;
+            width: 150px;
+            animation: moveBike 5s linear infinite;
+        }
 
-@keyframes bike {
-0% {
-left: 0;
-}
-25% {
-left: 100%;
-}
-}
+        h2 {
+            margin-top: 220px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        @keyframes moveBike {
+            0% {
+                left: -200px;
+            }
+            100% {
+                left: 70%;
+            }
+        }
 
   </style>
 </head>
@@ -62,8 +75,9 @@ left: 100%;
     <div class="container">
         <img src="images/tick.png" alt="Green Tick" class="green-tick">
         <h1>Your product will be delivered in 3 to 4 days!</h1>
-        <img class="bike" src="./images/boy.jpg" alt="" width="80px">
+        <img class="bike" src="./images/boy.jpg" alt="bike" width="80px">
         <h2>Rider Is On The Way</h2>
+        <button><a href="index.html">Buy Again</a></button>
     </div>
     <script>
         
