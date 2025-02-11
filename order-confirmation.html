@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .green-tick {
+            width: 100px;
+            height: 100px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #27ae60;
+            color: white;
+        }
+
+        button:hover {
+            background-color: green;
+            scale: 1.1;
+        }
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bike img{
+   animation:  bike 5s infinite linear;
+}  
+
+@keyframes bike {
+0% {
+left: 0;
+}
+25% {
+left: 100%;
+}
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/tick.png" alt="Green Tick" class="green-tick">
+        <h1>Your product will be delivered in 3 to 4 days!</h1>
+        <img class="bike" src="./images/boy.jpg" alt="" width="80px">
+        <h2>Rider Is On The Way</h2>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Method</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            width: 250px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+        }
+        .payment-option img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Payment Method</h1>
+    <p>Your product has been confirmed! Please choose a payment method.</p>
+    <div class="payment-options">
+        <button class="payment-option" style="background-color: green;" onclick="selectPayment('Easypaisa')">
+            <img src="images/easypaisa-logo.png"  alt="Easypaisa Logo"> Easypaisa
+        </button>
+        <button class="payment-option" style="background-color: black;" onclick="selectPayment('JazzCash')">
+            <img src="images/jazzcash-logo.png" alt="JazzCash Logo"> JazzCash
+        </button>
+        <button class="payment-option" style="background-color: orangered;" onclick="selectPayment('Cash on Delivery')">
+            <img src="images/cod.jpg" alt="JazzCash Logo">
+            Cash on Delivery
+        </button>
+    </div>
+
+    <script>
+        function selectPayment(method) {
+            alert("You selected " + method + " as your payment method. Your order is being processed!");
+        }
+        function selectPayment(method) {
+        alert("You selected " + method + " as your payment method. Your order is being processed!");
+        setTimeout(function() {
+            window.location.href = "order-confirmation.html";
+        }, 1000); // 2-second delay before redirect
+    }
+    </script>
+</body>
+</html>

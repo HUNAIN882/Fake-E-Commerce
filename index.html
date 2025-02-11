@@ -4,85 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
- 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            background-color: darkturquoise;
+        }
+        .shop-icon {
+            font-size: 30px;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+           
+        }
+        .product {
+            background-color: #d4f0f0;
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: burlywood;
+        }
+        .product img {
+            width: 100px;
+            height: 128px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .cart-btn {
+            background-color: #f39c12;
+            color: white;
+        }
+        .cart-btn:hover {
+            background-color: #e67e22;
+            transform: scale(1.1);
+        }
+        .buy-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .buy-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <h1>Fake E-Commerce Store</h1>
-        <div>
-            <span class="shop-icon" onclick="openCart()">🛒 <span id="cart-count" class="cart-count">0</span></span>
-            <span class="toggle-theme" onclick="toggleTheme()" id="theme-icon">☀️</span>
-        </div>
-    </div>
-    <div class="products" id="products"></div>
-    <div class="cart">
-        <h2>Shopping Cart</h2>
-        <ul id="cart-items"></ul>
-    </div>
+    <h1 style="background-color: gray; padding: 20px; color: white;">ShopXpress</h1>
+    <div class="shop-icon"></div>
+    <div class="container" id="product-list"></div>
+    
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const productsContainer = document.getElementById("products");
-            const cartItemsContainer = document.getElementById("cart-items");
-            const cartCountElement = document.getElementById("cart-count");
-            const themeIcon = document.getElementById("theme-icon");
-            let cart = [];
+        const products = [
+            { id: 1, name: "Winter t-Shirt", price: "20.99", image: "images/product1.jpg" },
+            { id: 2, name: "Brown Jacket", price: "15.49", image: "images/product2.jpg" },
+            { id: 3, name: "White And Black T-Shirt", price: "35.99", image: "images/product3.jpg" },
+            { id: 4, name: "Tution Bag", price: "10.99", image: "images/product4.jpg" },
+            { id: 5, name: "Plan Basic T-Shirts", price: "25.00", image: "images/product5.jpg" },
+            { id: 6, name: "Red Cotton Half Sleeve Tshirt", price: "18.75", image: "images/product6.jpg" },
+            { id: 7, name: "Pakistan Champions Trophy 2025 T-Shirt", price: "22.50", image: "images/product7.jpg" },
+            { id: 8, name: "Pakistan t20 World Cup 2024 T-Shirt", price: "30.99", image: "images/product8.jpg" },
+            { id: 9, name: "Nike T-Shirt", price: "40.00", image: "images/product9.jpg" },
+            { id: 10, name: "Black T-Shirt", price: "27.49", image: "images/product10.jpg" },
+            { id: 11, name: "Ronaldo T-Shirt", price: "27.49", image: "images/product11.jpg" },
+            { id: 12, name: "Messi T-Shirt", price: "27.49", image: "images/product12.jpg" },
+            { id: 13, name: "Pakistan Team Trouser", price: "27.49", image: "images/product13.jpg" },
+            { id: 14, name: "Pakistan Team Test Trouser", price: "27.49", image: "images/product14.jpg" },
+            { id: 15, name: "Pakistan Team T-Shirt", price: "27.49", image: "images/product15.jpg" },
+            { id: 16, name: "England Team T-Shirt Of Champions Trophy", price: "27.49", image: "images/product16.jpg" },
+            { id: 17, name: "Adidas T-Shirt", price: "27.49", image: "images/product17.jpg" },
+            { id: 18, name: "Adidas Original Men's Half Sleeve T-Shirt", price: "27.49", image: "images/product18.jpg" },
+            { id: 19, name: "Adidas Premium Sports T-Shirt", price: "27.49", image: "images/product19.jpg" },
+            { id: 20, name: "Puma Men's Football", price: "27.49", image: "images/product20.jpg" }
 
-            function fetchProducts() {
-                productsContainer.innerHTML = "Loading...";
-                fetch("https://fakestoreapi.com/products")
-                    .then(res => res.json())
-                    .then(products => {
-                        productsContainer.innerHTML = "";
-                        products.slice(0, 80).forEach(product => {
-                            const productElement = document.createElement("div");
-                            productElement.classList.add("product");
-                            productElement.innerHTML = `
-                                <img src="${product.image}" width="100" />
-                                <h3>${product.title}</h3>
-                                <p class="product-price">$${product.price}</p>
-                                <button class="add-to-cart" onclick="addToCart('${product.title}', ${product.price})">Add to Cart</button>
-                                <button class="buy-now" onclick="buyNow('${product.title}')">Buy Now</button>
-                            `;
-                            productsContainer.appendChild(productElement);
-                        });
-                    });
-            }
+        ];
 
-            window.addToCart = (title, price) => {
-                cart.push({ title, price });
-                alert("You have added to cart");
-                updateCart();
-            };
-            
-            window.buyNow = (title) => {
-                alert(`You have purchased: ${title}`);
-                cart.push({ title, price: 0 });
-                updateCart();
-            };
-            
-            function updateCart() {
-                cartItemsContainer.innerHTML = "";
-                cart.forEach(item => {
-                    const li = document.createElement("li");
-                    li.textContent = `${item.title} - $${item.price}`;
-                    cartItemsContainer.appendChild(li);
-                });
-                cartCountElement.textContent = cart.length;
-            }
-            
-            window.openCart = () => {
-                alert("Cart Items: " + cart.map(item => item.title).join(", "));
-            };
-
-            window.toggleTheme = () => {
-                document.body.classList.toggle("dark-mode");
-                themeIcon.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
-            };
-
-            fetchProducts();
+        const productList = document.getElementById("product-list");
+        products.forEach(product => {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>Price: $${product.price}</p>
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn" onclick="buyNow(${product.id})">Buy Now</button>
+            `;
+            productList.appendChild(productDiv);
         });
+
+        function buyNow(productId) {
+            alert("You have purchased the product!");
+            document.querySelector(".shop-icon").innerText = "🛍️ Full";
+            setTimeout(() => {
+                window.location.href = "buy-now.html";
+                setTimeout(() => {
+                    alert("Your products will be delivered in 3 to 4 days!");
+                }, 1000);
+            }, 500);
+        }
     </script>
 </body>
 </html>
