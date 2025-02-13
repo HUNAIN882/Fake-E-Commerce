@@ -4,65 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Now</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        .product-details {
-            border: 1px solid #ddd;
-            padding: 20px;
-            display: inline-block;
-        }
-        .product-details img {
-            width: 200px;
-            height: 200px;
-        }
-          button{
-            background-color: #27ae60;
-            color: white;
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-          }
-        button:hover {
-            background-color: green;
-            scale: 1.1;
-        }
-    </style>
+    <link rel="stylesheet" href="buy-now.css">
+   
 </head>
 <body>
     <h1>Order Summary</h1>
     <div class="product-details">
         <img src="images/product1.jpg " alt="images/product1.jpg">
         <h2 id="productName"></h2>
-        <p>Estimated Delivery: <strong>3 to 4 days</strong></p>
-       <h2 class=""></h2>
-       
-        <button style="background-color: green; color: white; margin-top: 80px;" onclick="confirmPurchase()">Confirm Purchase</button>
+        <h5>Mens Pure Black Color Full Sleeves Tshirt For <br> Winter and Summer Soft Stuff</h5>
+       <h6> | More Men from No Brand</h6>
+       <p>Brand :</p>
+       <h3 class="brand">No Brand</h3>
+        <h4>Price $20.99</h4>
+        <div class="color">Colour Family
+
+        </div>
+        <div class="color2">White</div>
+
+        <div class="color3">Black</div>
+         
+      
+        <button class="cart-btn" style= "color: white; margin-top: 80px;" onclick="Purchase()">Add To Cart</button>
+        <button class="buy-now" style="background-color: green; color: white; margin-top: 80px;" onclick="confirmPurchase()">Buy Now</button>
     </div>
 
-    <script>
-        document.getElementById('images/product1.jpg');
-        document.getElementById('images/product1.jpg');
-        
-        function confirmPurchase() {
-            alert("Thank You For Shopping With Us! Redirecting to payment...");
-        }
-
-        document.getElementById('productImage').src = localStorage.getItem('productImage');
-        document.getElementById('productName').textContent = localStorage.getItem('productName');
-        
-        function confirmPurchase() {
-            alert("Your product is confirmed! Redirecting to payment...");
-            window.location.href = "payment.html";
-        }
-
-       
-    </script>
+    <script src="buy-now.js"></script>
 </body>
 </html>

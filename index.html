@@ -4,74 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            text-align: center;
-            background-color: darkturquoise;
-        }
-        a {
-           text-decoration: none;
-           bottom: 50px;
-        }
-        .shop-icon {
-            font-size: 30px;
-            position: fixed;
-            top: 10px;
-            right: 20px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-           
-        }
-        .product {
-            background-color: #d4f0f0;
-            padding: 15px;
-            border-radius: 10px;
-            width: 250px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            background-color: burlywood;
-        }
-        .product img {
-            width: 100px;
-            height: 128px;
-            object-fit: cover;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        button {
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-        }
-        .cart-btn {
-            background-color: #f39c12;
-            color: white;
-        }
-        .cart-btn:hover {
-            background-color: #e67e22;
-            transform: scale(1.1);
-        }
-        .buy-btn {
-            background-color: #27ae60;
-            color: white;
-        }
-
-        .buy-btn:hover {
-            background-color: #45a049;
-            transform: scale(1.1);
-        
-        }
+      
     </style>
 </head>
 <body>
@@ -83,55 +19,6 @@
 
  
     
-    <script>
-        const products = [
-            { id: 1, name: "Winter t-Shirt", price: "20.99", image: "images/product1.jpg" },
-            { id: 2, name: "Brown Jacket", price: "15.49", image: "images/product2.jpg" },
-            { id: 3, name: "White And Black T-Shirt", price: "35.99", image: "images/product3.jpg" },
-            { id: 4, name: "Tution Bag", price: "10.99", image: "images/product4.jpg" },
-            { id: 5, name: "Plan Basic T-Shirts", price: "25.00", image: "images/product5.jpg" },
-            { id: 6, name: "Red Cotton Half Sleeve Tshirt", price: "18.75", image: "images/product6.jpg" },
-            { id: 7, name: "Pakistan Champions Trophy 2025 T-Shirt", price: "22.50", image: "images/product7.jpg" },
-            { id: 8, name: "Pakistan t20 World Cup 2024 T-Shirt", price: "30.99", image: "images/product8.jpg" },
-            { id: 9, name: "Nike T-Shirt", price: "40.00", image: "images/product9.jpg" },
-            { id: 10, name: "Black T-Shirt", price: "27.49", image: "images/product10.jpg" },
-            { id: 11, name: "Ronaldo T-Shirt", price: "27.49", image: "images/product11.jpg" },
-            { id: 12, name: "Messi T-Shirt", price: "27.49", image: "images/product12.jpg" },
-            { id: 13, name: "Pakistan Team Trouser", price: "27.49", image: "images/product13.jpg" },
-            { id: 14, name: "Pakistan Team Test Trouser", price: "27.49", image: "images/product14.jpg" },
-            { id: 15, name: "Pakistan Team T-Shirt", price: "27.49", image: "images/product15.jpg" },
-            { id: 16, name: "England Team T-Shirt Of Champions Trophy", price: "27.49", image: "images/product16.jpg" },
-            { id: 17, name: "Adidas T-Shirt", price: "27.49", image: "images/product17.jpg" },
-            { id: 18, name: "Adidas Original Men's Half Sleeve T-Shirt", price: "27.49", image: "images/product18.jpg" },
-            { id: 19, name: "Adidas Premium Sports T-Shirt", price: "27.49", image: "images/product19.jpg" },
-            { id: 20, name: "Puma Men's Football", price: "27.49", image: "images/product20.jpg" }
-
-        ];
-
-        const productList = document.getElementById("product-list");
-        products.forEach(product => {
-            const productDiv = document.createElement("div");
-            productDiv.classList.add("product");
-            productDiv.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>Price: $${product.price}</p>
-                <button class="cart-btn">Add to Cart</button>
-                <button class="buy-btn" onclick="buyNow(${product.id})">Buy Now</button>
-            `;
-            productList.appendChild(productDiv);
-        });
-
-        function buyNow(productId) {
-            alert("You have purchased the product!");
-            document.querySelector(".shop-icon").innerText = "🛍️ Full";
-            setTimeout(() => {
-                window.location.href = "buy-now.html";
-                setTimeout(() => {
-                    alert("Your products will be delivered in 3 to 4 days!");
-                }, 1000);
-            }, 500);
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
