@@ -37,11 +37,11 @@ products.forEach(product => {
 });
 function cartBtn (productId) {
     alert("You have added the product to the cart!");
-    document.querySelector(".shop-icon").innerText = "🛒 Full";
+  
 }
 function buyNow(productId) {
     alert("You have purchased the product!");
-    document.querySelector(".shop-icon").innerText = "🛍️ Full";
+    // 
     setTimeout(() => {
         window.location.href = "buy-now.html";
         setTimeout(() => {
@@ -49,3 +49,6 @@ function buyNow(productId) {
         }, 1000);
     }, 500);
 }
+
+
+
