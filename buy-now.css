@@ -249,7 +249,7 @@ span {
 
 
 .add {
-    margin-top: -30px;
+    margin-top: -25px;
     margin-left: 1180px;
 }
 
@@ -299,3 +299,20 @@ span {
 }
 
 
+.stand4 {
+    color: grey;
+    margin-left: 1165px;
+    margin-top: -30px;
+}
+
+
+.rs {
+    margin-left: 1390px;
+    margin-top: -42px;
+}
+
+
+.money {
+    margin-left: 1180px;
+    margin-top: 50px;
+}
