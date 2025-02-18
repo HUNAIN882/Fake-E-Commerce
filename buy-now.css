@@ -1,13 +1,12 @@
-
 h1 {
     margin-right: 1000px;
 }
 
-h5{
-   margin-top: -200px;
-   font-size: 20px;
-   font-weight: 500;
-   margin-right: 300px;
+h5 {
+    margin-top: -210px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 260px;
 }
 
 p {
@@ -20,18 +19,22 @@ body {
     text-align: center;
     padding: 20px;
 }
+
 .product-details {
     border: 1px solid #ddd;
     padding: 20px;
     display: inline-block;
 }
+
 .product-details img {
     width: 200px;
     height: 200px;
     margin-right: 1000px;
+    cursor: zoom-in;
 }
-  button{
-    background-color: #27ae60;
+
+button {
+    background-color: #2abbe8;
     color: white;
     padding: 10px;
     margin: 5px 5px;
@@ -39,11 +42,13 @@ body {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-  }
+}
+
 button:hover {
     background-color: green;
     scale: 1.1;
 }
+
 h6 {
     font-size: 12px;
     margin-top: 50px;
@@ -59,12 +64,12 @@ h6:hover {
 
 p {
     margin-left: 480px;
-   color: grey;
-   margin-top: -42px;
-   font-size: 13px;
+    color: grey;
+    margin-top: -42px;
+    font-size: 13px;
 }
 
-.brand  {
+.brand {
     margin-top: -28px;
     font-size: 12px;
     margin-right: 420px;
@@ -117,6 +122,7 @@ h4 {
     border: 50px;
 }
 
+
 .buy-now:hover {
     background-color: #45a049;
     transform: scale(1.1);
@@ -124,7 +130,7 @@ h4 {
 
 
 .color3 {
-    margin-right: 300px;  
+    margin-right: 300px;
     margin-top: 30px;
     cursor: pointer;
 }
@@ -135,4 +141,161 @@ h4 {
     margin-right: 80px;
     cursor: pointer;
 }
+
+.size {
+    margin-top: 60px;
+    margin-right: 540px;
+    color: grey;
+}
+
+
+.int {
+    margin-top: -20px;
+    margin-right: 320px;
+}
+
+.int:hover {
+    cursor: copy;
+}
+
+
+.size2 {
+    margin-right: 290px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+
+.size3 {
+    margin-top: -20px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+button {
+    padding: 5px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.location i{
+    font-size: 100px;
+}
+
+
+.quantity {
+    margin-top: 100px;
+    color: grey;
+    margin-right: 520px;
+}
+
+
+
+
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -42px;
+    margin-right: 170px;
+}
+button {
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    margin-top: -100px;
+}
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+span {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+
+.home {
+    margin-left: 1100px;
+    margin-top: -560px;
+    color: grey;
+}
+
+.icon i{
+    margin-left: 950px;
+}
+
+.icon {
+   margin-top: -17px;
+} 
+
+
+.add {
+    margin-top: -30px;
+    margin-left: 1180px;
+}
+
+.add2 {
+    margin-left: 1090px;
+}
+
+
+/* Dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown  {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    margin-left: 1500px;
+    margin-top: -5px;
+}
+#selectedOption {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.stand {
+    margin-left: 1110px;
+    margin-top: 30px;
+}
+
 

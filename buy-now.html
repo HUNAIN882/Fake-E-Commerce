@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Now</title>
     <link rel="stylesheet" href="buy-now.css">
+    <script src="https://kit.fontawesome.com/711c71764b.js" crossorigin="anonymous"></script>
+
+    
    
 </head>
 <body>
@@ -25,11 +28,42 @@
         <div class="color3">Black</div>
         <div class="color4">Navy Blue</div>
          
+        <div class="quantity">Quantity</div>
+        <div class="container">
+            <button id="decrease">-</button>
+            <span id="quantity">1</span>
+            <button id="increase">+</button>
+        </div>
+    
       
         <button class="cart-btn"  onclick="Purchase()">Add To Cart</button>
         <button class="buy-now" onclick="confirmPurchase()">Buy Now</button>
     </div>
 
+    <div class="home">Delivery Options</div>
+
+    <div class="icon">
+        <i class="fa-solid fa-location-dot"></i>
+    </div>
+   
+    <div class="dropdown">
+        <span style="color: #136cff; cursor: pointer ; font-size: 14px;" id="dropdownButton" onclick="toggleDropdown()">Change</span>
+        <div class="dropdown-content" id="dropdownContent">
+            <a onclick="selectOption('Azad Kashmir')">Azad Kashmir</a>
+            <a onclick="selectOption('Punjab')">Punjab</a>
+            <a onclick="selectOption('Gilgit-Baltistan')">Gilgit-Baltistan</a>
+            <a onclick="selectOption('Islamabad')">Islamabad</a>
+            <a onclick="selectOption('Sindh')">Sindh</a>
+            <a onclick="selectOption('Balochistan')">Balochistan</a>
+        </div>
+    </div>
+    <div class="add">Sindh, Karachi - Gulshan-e-</div>
+    <div class="add2">Iqbal, Block 15</div>
+
+    <div class="stand">Standard Delivery</div>
+     <img style="margin-left: 905px; margin-top: -45px;" src="./images/35430743-delivery-man-with-carton-box-icon-flat-isolated-on-white-background-vector-illustration.jpg" width="78px" alt="">
     <script src="buy-now.js"></script>
+   
+
 </body>
 </html>
