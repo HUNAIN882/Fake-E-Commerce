@@ -72,32 +72,25 @@ function selectOption(option) {
 
 function toggleChat() {
     let chatBox = document.getElementById("chatBox");
-    if (chatBox.style.display === "none" || chatBox.style.display === "") {
-        chatBox.style.display = "block"; // Open Chat
+
+    if (chatBox.style.bottom === "-350px") {
+        chatBox.style.bottom = "20px"; // Show modal
     } else {
-        chatBox.style.display = "none"; // Close Chat
+        chatBox.style.bottom = "-350px"; // Hide modal
     }
+}
+
+function hideChat() {
+    document.getElementById("chatBox").style.bottom = "-350px"; // Move modal down
 }
 
 function sendMessage() {
     let message = document.getElementById("userMessage").value;
-    let messageContainer = document.getElementById("messageContainer");
 
     if (message.trim() === "") {
         alert("Please enter a message before sending.");
     } else {
-        // Create message element
-        let newMessage = document.createElement("p");
-        newMessage.className = "userMessage";
-        newMessage.textContent = message;
-        messageContainer.appendChild(newMessage);
-
-        // Clear message box
-        document.getElementById("userMessage").value = "";
-
-        // Auto-scroll to latest message
-        messageContainer.scrollTop = messageContainer.scrollHeight;
-
         alert("Your message is sent to our seller.");
+        document.getElementById("userMessage").value = "";
     }
 }
