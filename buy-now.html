@@ -23,10 +23,10 @@
         <div class="color">Colour Family
 
         </div>
-        <div class="color2">Blue</div>
+        <div style="cursor: pointer;" class="color2">Blue</div>
 
-        <div class="color3">Black</div>
-        <div class="color4">Navy Blue</div>
+        <div style="cursor: pointer;" class="color3">Black</div>
+        <div style="cursor: pointer;" class="color4">Navy Blue</div>
          
         <div class="quantity">Quantity</div>
         <div class="container">
@@ -66,7 +66,40 @@
      <div class="rs">Rs.135</div>
      <div class="money">Cash on Delivery Available</div>
      <img style="margin-left: 915px; margin-top: -39px;" src="./images/black-white-line-drawing-single-dollar-bill_925376-309712.avif" alt="" width="58px">
+     <div class="return">Return & Warranty </div>
+     <div class="refresh">
+        <i class="fa-solid fa-rotate-right"></i>
+     </div>
+     <div class="num">14</div>
+     <div class="easy">14 days easy return</div>
+     <div class="shield">
+        <img src="./images/shield-slash.svg" alt="" width="20px">
+        <div class="not">Warranty not available</div>
+     </div>
+
+     <div class="scan">
+        <img src="./images/scan.png" alt="">
+     </div>
+     <div class="mob">Scan With Mobile</div>
+     <div class="app">Download app to enjoy <br> exclusive discounts!</div>
+     <div class="xpress">
+        <img src="./images/xpress.jpg" alt="" width="140px">
+     </div>
+     <div class="sold">Sold by</div>
+     <div class="cube">Hook Cube</div>
+  
     <script src="buy-now.js"></script>
+
+     <!-- message Section  -->
+    
+     <h2 onclick="toggleChat()">Chat Now</h2>
+
+    <div id="chatBox">
+        <p><strong>Product Details:</strong> This is a high-quality product available at a great price.</p>
+        <textarea id="userMessage" placeholder="Type your message..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <div id="messageContainer"></div>
+    </div>
    
 
 </body>

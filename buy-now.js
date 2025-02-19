@@ -67,3 +67,37 @@ function selectOption(option) {
     document.getElementById("dropdownButton").innerText = option;
     document.getElementById("dropdownContent").style.display = "none";
 }
+
+// Message
+
+function toggleChat() {
+    let chatBox = document.getElementById("chatBox");
+    if (chatBox.style.display === "none" || chatBox.style.display === "") {
+        chatBox.style.display = "block"; // Open Chat
+    } else {
+        chatBox.style.display = "none"; // Close Chat
+    }
+}
+
+function sendMessage() {
+    let message = document.getElementById("userMessage").value;
+    let messageContainer = document.getElementById("messageContainer");
+
+    if (message.trim() === "") {
+        alert("Please enter a message before sending.");
+    } else {
+        // Create message element
+        let newMessage = document.createElement("p");
+        newMessage.className = "userMessage";
+        newMessage.textContent = message;
+        messageContainer.appendChild(newMessage);
+
+        // Clear message box
+        document.getElementById("userMessage").value = "";
+
+        // Auto-scroll to latest message
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+
+        alert("Your message is sent to our seller.");
+    }
+}
