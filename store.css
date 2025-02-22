@@ -4,3 +4,20 @@
     box-sizing: border-box;
 }
 
+
+
+img {
+    margin-left: 50px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+
+input {
+    padding: 13px 19px;
+    width: 50%;
+    height: 50%;
+    margin-top: -100px;
+    margin-left: 100px;
+    outline: none;
+}

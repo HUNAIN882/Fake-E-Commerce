@@ -94,3 +94,5 @@ function sendMessage() {
         document.getElementById("userMessage").value = "";
     }
 }
+
+

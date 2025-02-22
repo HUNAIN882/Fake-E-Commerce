@@ -4,6 +4,110 @@ body {
     text-align: center;
     background-color: darkturquoise;
 }
+
+/* log in */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar h2 { margin: 0; }
+.nav-icon {
+    width: 100px;
+    height: 40px;
+    background: white;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 120px;
+    text-align: left;
+}
+.nav-icon.active .nav-dropdown {
+    display: block;
+}
+.nav-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-dropdown button:hover { background: #f0f0f0; }
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 350px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.close-btn { cursor: pointer; color: red; float: right; font-size: 22px; }
+.modal h3 {
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+input:focus {
+    border: 1px solid #007BFF;
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #007BFF;
+    /* color: white; */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Sign Up */
 a {
    text-decoration: none;
    bottom: 50px;

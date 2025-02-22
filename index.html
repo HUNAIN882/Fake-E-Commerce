@@ -11,7 +11,38 @@
 
 </head>
 <body>
-   <h1 style="background-color: gray; padding: 20px; color: white;">ShopXpress</h1> 
+    <!-- Log In -->
+    <div class="navbar">
+        <h2>Shop Xpress</h2>
+        <div class="nav-icon" onclick="toggleDropdown()">Menu
+            <div class="nav-dropdown">
+                <button onclick="openModal('signup-form')">Sign Up</button>
+                <button onclick="openModal('login-form')">Log In</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="signup-form">
+        <span class="close-btn" onclick="closeModal('signup-form')">&times;</span>
+        <h3>Sign Up</h3>
+        <input type="text" id="signup-name" placeholder="Enter your name">
+        <input type="email" id="signup-email" placeholder="Enter your email">
+        <input type="password" id="signup-password" placeholder="Enter your password">
+        <button onclick="signUp()">Register</button>
+    </div>
+
+    <div class="modal" id="login-form">
+        <span class="close-btn" onclick="closeModal('login-form')">&times;</span>
+        <h3>Log In</h3>
+        <input type="text" id="login-name" placeholder="Enter your name">
+        <input type="email" id="login-email" placeholder="Enter your email">
+        <input type="password" id="login-password" placeholder="Enter your password">
+        <button onclick="logIn()">Login</button>
+    </div>
+
+
+     <!-- Sign Up -->
+  
    
     <div class="shop-icon"></div>
     <div class="container" id="product-list"></div>
