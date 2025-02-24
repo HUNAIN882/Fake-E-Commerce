@@ -22,6 +22,7 @@ const products = [
 
 ];
 
+
 const productList = document.getElementById("product-list");
 products.forEach(product => {
     const productDiv = document.createElement("div");
@@ -35,77 +36,4 @@ products.forEach(product => {
     `;
     productList.appendChild(productDiv);
 });
-function cartBtn (productId) {
-    alert("You have added the product to the cart!");
-  
-}
-function buyNow(productId) {
-    alert("You have purchased the product!");
-    // 
-    setTimeout(() => {
-        window.location.href = "buy-now.html";
-        setTimeout(() => {
-            alert("Your products will be delivered in 3 to 4 days!");
-        }, 1000);
-    }, 500);
-}
-
-
-// Log In Sign Up 
-let users = {};
-function signUp() {
-    let name = document.getElementById('signup-name').value;
-    let email = document.getElementById('signup-email').value;
-    let password = document.getElementById('signup-password').value;
-    
-    if (name && email && password) {
-        users[email] = { name, password };
-        alert('Sign Up Successful!');
-        closeModal('signup-form');
-    } else {
-        alert('Please fill all fields!');
-    }
-}
-
-function logIn() {
-    let name = document.getElementById('login-name').value;
-    let email = document.getElementById('login-email').value;
-    let password = document.getElementById('login-password').value;
-    
-    if (users[email] && users[email].password === password && users[email].name === name) {
-        alert('Welcome to the Shop Xpress website!');
-        closeModal('login-form');
-    } else {
-        alert('Your name, email, or password is incorrect. Please try again!');
-    }
-}
-
-function toggleDropdown() {
-    document.querySelector('.nav-icon').classList.toggle('active');
-}
-
-function openModal(id) {
-    let modal = document.getElementById(id);
-    modal.style.display = 'block';
-    setTimeout(() => modal.classList.add('show'), 50);
-}
-
-function closeModal(id) {
-    let modal = document.getElementById(id);
-    modal.classList.remove('show');
-    setTimeout(() => modal.style.display = 'none', 500);
-}
-
-const colors = ["#00FFFF", "#39FF14", "#9D00FF", "#FF10F0", "#FF5F1F"];
-const container = document.querySelector(".product-container");
-
-function changeColor() {
-    let randomColor = colors[Math.floor(Math.random() * colors.length)];
-    container.style.backgroundColor = randomColor;
-}
-
-setInterval(changeColor, 2000); // Har 2 sec baad color change hoga
-
-
-// Readmore
 
