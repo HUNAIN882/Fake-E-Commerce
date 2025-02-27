@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+h2 {
+    color: white;
+}
+body {
+    animation: bgAnimation 10s infinite linear;
+}
+
 .login-container {
     background: white;
     padding: 20px;
@@ -12,6 +19,8 @@
     width: 300px;
     margin-left: 680px;
     margin-top: 280px;
+    background: linear-gradient(45deg, #ff9966, #ff5e62);
+
 }
 .input-group {
     position: relative;
@@ -22,6 +31,8 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
 }
 .eye-icon {
     position: absolute;
@@ -46,4 +57,17 @@ button:hover {
 a {
     text-decoration: none;
     color: white;
+}
+
+.g_id_signin {
+    margin-top: 20px;
+
+}
+
+@keyframes bgAnimation {
+    0% { background: #ff5733; }
+    25% { background: #33ff57; }
+    50% { background: #3357ff; }
+    75% { background: #ff33aa; }
+    100% { background: #ff5733; }
 }

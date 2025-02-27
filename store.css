@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    animation: movingGradient 10s infinite alternate;
+}
+
 
 
 .image {
@@ -14,16 +18,44 @@
 }
 
 
-.inp {
-    margin-left: 350px;
-    outline: none;
-    margin-top: -50px;
-    
+ input{
+    margin-left: 550px;
+    margin-top: 50px;
+    padding: 18px 350px 15px 18px;
 }
 
  
 
 .anchor {
     margin-left: 100px;
-    margin-top: 0px;
+    margin-top: -30px;
+}
+
+
+@keyframes movingGradient {
+    0% { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
+    25% { background: linear-gradient(45deg, #1e3c72, #2a5298); }
+    50% { background: linear-gradient(45deg, #43cea2, #185a9d); }
+    75% { background: linear-gradient(45deg, #ff5f6d, #ffc371); }
+    100% { background: linear-gradient(45deg, #ff416c, #ff4b2b); }
+}
+
+  i {
+    font-size: 20px; 
+    color: white;
+    margin-top: -50px;
+    margin-left: 1010px;
+}
+
+.search {
+    margin-top: -20px;
+    margin-left: 50px;
+    cursor: pointer;
+    outline: none;
+   
+}
+
+
+.search i {
+    color: blue;
 }
