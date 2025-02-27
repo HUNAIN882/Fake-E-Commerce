@@ -18,7 +18,7 @@ const products = [
     { id: 16, name: "England Team Shirt Of Champions Trophy 2025", price: "27.49", image: "images/product16.jpg" },
     { id: 17, name: "Adidas Shirt", price: "27.49", image: "images/product17.jpg" },
     { id: 18, name: "Adidas Original Men's Half Sleeve T-Shirt", price: "27.49", image: "images/product18.jpg" },
-    { id: 19, name: "Adidas Premium Sports T-Shirt", price: "27.49", image: "images/shoes.webp" },
+    { id: 19, name: "Branded Shoes 2025 New Arrival", price: "27.49", image: "images/shoes.webp" },
     { id: 20, name: "Karachi King Shirt 2024 ", price: "27.49", image: "images/Karachi-Kings-PSL-Shirt-2024_jpg.webp" }
 
 ];
