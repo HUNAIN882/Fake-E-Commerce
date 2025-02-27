@@ -1,3 +1,4 @@
+fetch('https://fakestoreapi.com/products')
 const products = [
     { id: 1, name: "Mens Pure Black Color Full Sleeves Tshirt For Winter and Summer Soft Stuff", price: "20.99", image: "images/polo.webp" },
     { id: 2, name: "Brown Jacket Men For Winter New Arrival 2025", price: "15.49", image: "images/product2.jpg" },
@@ -98,14 +99,4 @@ function closeModal(id) {
 
 const colors = ["#00FFFF", "#39FF14", "#9D00FF", "#FF10F0", "#FF5F1F"];
 const container = document.querySelector(".product-container");
-
-function changeColor() {
-    let randomColor = colors[Math.floor(Math.random() * colors.length)];
-    container.style.backgroundColor = randomColor;
-}
-
-setInterval(changeColor, 2000); // Har 2 sec baad color change hoga
-
-
-// Readmore
 

@@ -19,7 +19,7 @@ body {
 
 
  input{
-    margin-left: 550px;
+    margin-left: 350px;
     margin-top: 50px;
     padding: 18px 350px 15px 18px;
 }
@@ -27,7 +27,7 @@ body {
  
 
 .anchor {
-    margin-left: 100px;
+    margin-left: 170px;
     margin-top: -30px;
 }
 
@@ -43,8 +43,8 @@ body {
   i {
     font-size: 20px; 
     color: white;
-    margin-top: -50px;
-    margin-left: 1010px;
+    margin-top: -60px;
+    margin-left: 1410px;
 }
 
 .search {
@@ -59,3 +59,207 @@ body {
 .search i {
     color: blue;
 }
+
+
+
+/* Styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: grey;
+    text-align: center;
+    
+}
+
+.nav {
+    margin-right: 1300px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.nav a {
+    color: #007BF3;
+}
+
+
+/* log in */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    color: white;
+}
+.navbar h2 { margin: 0; }
+.nav-icon {
+    width: 100px;
+    height: 40px;
+    background: white;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-icon:hover{
+    background-color: #f0f0f0;
+}
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 120px;
+    text-align: left;
+}
+.nav-icon.active .nav-dropdown {
+    display: block;
+}
+.nav-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-dropdown button:hover { background: #f0f0f0; }
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 350px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.close-btn { cursor: pointer; color: red; float: right; font-size: 22px; }
+.modal h3 {
+    color: #007BF3;
+    margin-bottom: 15px;
+}
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    background: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+input:focus {
+    border: 1px solid #007BFF;
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: #007BFF;
+    /* color: white; */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Sign Up */
+a {
+   text-decoration: none;
+   bottom: 50px;
+}
+.shop-icon {
+    font-size: 30px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+   
+}
+
+.product {
+    background-color: #d4f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: cornflowerblue;
+    
+    
+}
+.product img {
+    width: 100px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.cart-btn {
+    background-color: #f39c12;
+    color: white;
+}
+.cart-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+.buy-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+
+}
+
+
+
+@keyframes neonLinearGradient {
+    0% {  }
+    50% {  }
+    75% { background: linear-gradient(45deg, #ff00ff, #ff0000); }
+    100% { background: linear-gradient(45deg, #ff00ff, #00ffff); }
+}
+

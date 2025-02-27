@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(90deg, #FF0000, #FF7300, #FFFF00, #00FF00, #0000FF, #4B0082, #8B00FF);
+   background-color: crimson;
     color: white;
+
 }
 .payment-options {
     display: flex;
@@ -37,15 +38,3 @@ body {
 }
 
 
-@keyframes neonGlow {
-    0% { background: #ff00ff; }
-    25% { background: #ff4500; }
-    50% { background: #00ff00; }
-    75% { background: #00ffff; }
-    100% { background: #ff00ff; }
-  }
-  
-  body {
-    animation: neonGlow 5s infinite alternate;
-    color: white;
-  }

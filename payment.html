@@ -13,8 +13,16 @@
     <h1>Select Payment Method</h1>
     <p>Your product has been confirmed! Please choose a payment method.</p>
     <div class="payment-options">
+        <button class="payment-option" style="background-color: orange;" onclick="selectPayment('Shop-Xpress Wallet')">
+            <img src="images/wallet.jpg" alt="JazzCash Logo">
+           Shop Xpress Wallet
+        </button>
+        <span>Other Payment Method</span>
         <button class="payment-option" style="background-color: green;" onclick="selectPayment('Easypaisa')">
             <img src="images/easypaisa-logo.png"  alt="Easypaisa Logo"> Easypaisa
+        </button>
+        <button class="payment-option" style="background-color: cadetblue;" onclick="selectPayment('Credit/Debit Card')">
+            <img src="images/card.jpg" alt="JazzCash Logo"> Credit/Debit Card
         </button>
         <button class="payment-option" style="background-color: black;" onclick="selectPayment('JazzCash')">
             <img src="images/jazzcash-logo.png" alt="JazzCash Logo"> JazzCash
@@ -23,6 +31,12 @@
             <img src="images/cod.jpg" alt="JazzCash Logo">
             Cash on Delivery
         </button>
+        <button class="payment-option" style="background-color: green;" onclick="selectPayment('HBL Bank')">
+            <img src="images/bank.png" alt="JazzCash Logo">
+           HBL Bank Account
+        </button>
+
+       
     </div>
 
     <script src="payment.js"></script>
